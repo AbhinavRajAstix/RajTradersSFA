@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+   android:background="#ffffff"
+	>
+     
+    <TextView 
+        android:id="@+id/txtVw_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#0070AF"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffffff"
+       android:text="Share Order with Distributor"/>
+
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:layout_below="@+id/txtVw_header"
+      android:layout_above="@+id/ll_submit_cncl"
+      android:clipToPadding="false"
+      android:scrollbarStyle="insideOverlay"
+      
+      >
+ 	
+<LinearLayout 
+    android:id="@+id/ll1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="16dp"
+     android:paddingRight="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distributor Email Address :"
+        android:paddingTop="@dimen/dimen_10dp"
+        android:paddingLeft="10dp"
+
+        android:textColor="#0000EE"
+        android:textSize="14sp"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_add_et"
+        android:textSize="13sp"
+        android:background="@drawable/edittext_rounded_black"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen_10dp"
+            android:id="@+id/ll_Dates"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:layout_height="wrap_content" >
+
+            <TextView android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Date for which orders to be shared :"
+                android:id="@+id/tv_ofDate"
+
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+
+                android:textSize="15sp"
+                android:textColor="#000"
+                />
+            <TextView android:layout_width="0dp"
+                android:layout_weight="0.3"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text=""
+                android:drawableRight="@drawable/calander_quotation"
+                android:enabled="false"
+                android:id="@+id/ofDate"
+
+                android:background="@drawable/outside_boundry"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginBottom="1dp"
+
+                android:textSize="14sp"
+                android:textColor="#000"
+                />
+        </LinearLayout>
+
+
+</LinearLayout>
+ </ScrollView>
+
+   <LinearLayout 
+       android:id="@+id/ll_submit_cncl"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="5dp"
+      android:layout_alignParentBottom="true"
+       android:weightSum="2">
+    <Button
+        android:id="@+id/btnSubmit"
+     
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+       android:textSize="14sp"
+        android:textColor="#ffffff"
+       android:background="@drawable/custom_button"
+       android:layout_centerHorizontal="true"
+        android:text="@string/Submit" />
+     <Button
+        android:id="@+id/btn_cancel_Back"
+     
+         android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+         android:textColor="#ffffff"
+          android:textSize="14sp"
+        android:layout_marginLeft="2dp"
+       android:background="@drawable/custom_button"
+       android:layout_centerHorizontal="true"
+        android:text="Cancel" />
+    </LinearLayout>
+</RelativeLayout>
+  

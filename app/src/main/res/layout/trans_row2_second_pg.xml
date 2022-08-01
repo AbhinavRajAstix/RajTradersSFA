@@ -1,0 +1,24 @@
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tblDyn2Pg2Row"
+    android:layout_margin="0.2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv2PG2SCHDES"
+            style="@style/contentTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="NA"
+            android:textColor="#303F9F" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/graycolor" />
+    </LinearLayout>
+</TableRow>

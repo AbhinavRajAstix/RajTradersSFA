@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:weightSum="6">
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="0.2dp"
+        android:layout_weight="1.5"
+
+
+        android:gravity="right"
+        android:singleLine="false"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tvTodayTarget"
+        android:layout_margin="0.2dp"
+        
+        android:textSize="9sp"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+
+        android:singleLine="false"
+        android:layout_weight="0.8"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvTodayAchievednew"
+        android:layout_margin="0.2dp"
+
+        android:textSize="9sp"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+        android:singleLine="false"
+        android:visibility="gone"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tvTodayBal"
+        android:layout_margin="0.2dp"
+        android:visibility="gone"
+        android:textSize="9sp"
+        android:layout_width="0dp"
+        android:gravity="center_horizontal"
+        android:singleLine="false"
+        android:layout_weight="0.8"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvMTDTarget"
+        android:layout_margin="0.2dp"
+        
+        android:textSize="9sp"
+        android:layout_width="0dp"
+        android:singleLine="false"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.5"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvMTDAchieved"
+        android:layout_margin="0.2dp"
+        
+        android:textSize="9sp"
+        android:layout_width="0dp"
+        android:singleLine="false"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.5"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tvMTDBal"
+        android:layout_margin="0.2dp"
+        
+        android:textSize="9sp"
+        android:layout_width="0dp"
+        android:singleLine="false"
+        android:gravity="center_horizontal"
+        android:layout_weight="1.5"
+        android:layout_height="match_parent" />
+</LinearLayout>

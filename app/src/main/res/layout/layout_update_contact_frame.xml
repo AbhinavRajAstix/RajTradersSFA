@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/ll_address_section"
+
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rlContactInvalid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+        <!--                android:visibility="gone"-->
+
+        <ImageView
+            android:id="@+id/ivContactInvalid"
+            android:layout_width="@dimen/dimen_20dp"
+            android:layout_height="@dimen/dimen_20dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/notverfiredphone" />
+
+        <TextView
+            android:id="@+id/tvContactNoCorrection"
+            style="@style/titleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btnEditContact"
+            android:layout_toRightOf="@id/ivContactInvalid"
+            android:paddingHorizontal="5dp"
+            android:text="Contact Number Correction required"
+            android:textColor="@color/new_orange" />
+
+        <Button
+            android:id="@+id/btnEditContact"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_rounded_layout"
+            android:textColor="@android:color/white"
+            android:paddingHorizontal="5dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:text="Edit Contact"
+           />
+    </RelativeLayout>
+
+</LinearLayout>

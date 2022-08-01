@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="2dp"
+    android:orientation="horizontal"
+    android:weightSum="5">
+
+        <TextView
+
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_MeasureName"
+            android:layout_weight="1"
+            android:text="Volume" />
+
+        <TextView
+            android:id="@+id/tv_MonthTgt"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"
+            android:textColor="@color/black"
+            android:background="#DDEBF7"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_MTD_Ach"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"
+            android:textColor="@color/black"
+            android:background="#DDEBF7"
+            android:textSize="11sp"/>
+
+        <TextView
+            android:id="@+id/tv_CurrentDayRate"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"
+            android:textColor="@color/black"
+            android:background="#DDEBF7"
+            android:textSize="11sp"/>
+        <TextView
+            android:id="@+id/tv_RequiredDayRate"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2"
+            android:textColor="@color/black"
+            android:background="#DDEBF7"
+            android:textSize="11sp"/>
+</LinearLayout>
+

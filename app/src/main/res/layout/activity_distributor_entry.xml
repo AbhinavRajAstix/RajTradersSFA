@@ -1,0 +1,406 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--     <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Opening Stock : \nPhysical Stock Verification Data Entry : Today"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:padding="6dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#37474F"/>
+         -->
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="@drawable/custom_header_color"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_Btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:src="@drawable/back_button_image"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/img_side_popUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/ic_action"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/bardd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/DistrbtrENtryHeader"
+            android:textColor="#ffff"
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+            android:typeface="normal" />
+
+        <ImageView
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+    <!-- <include layout="@layout/custom_header" />
+ -->
+    <Spinner
+        android:id="@+id/spinner_for_filter"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/ll1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/spinner_distribtr_bckgrnd"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txt_stockDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_for_filter"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="2dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:text="Stock Date: "
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/ll_forSearchBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_stockDate"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="1dp"
+            android:layout_weight="2"
+            android:hint="Enter text to search" />
+
+
+        <ImageView
+            android:id="@+id/btn_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.40"
+            android:src="@drawable/search_img" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLparentOfInPcsCs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_forSearchBox"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_stockEntry_Cases"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Stock Entry(In Pieces)"
+            android:textColor="#FF4A4F"
+            android:textSize="12sp"
+
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <RadioButton
+            android:id="@+id/RB_inpieces"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+
+            android:layout_weight="1"
+            android:text="In Pieces"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/RB_InCases"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="In Cases"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_forTableHeaderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LLparentOfInPcsCs"
+        android:background="@drawable/layout_top_rounded_corner"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="5dp"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9">
+
+            <EditText
+                android:id="@+id/ed_search"
+                style="@style/editTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_background"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 -,()/*."
+                android:hint="SEARCH"
+                android:paddingHorizontal="@dimen/dimen_10dp"
+                android:paddingVertical="@dimen/dimen_10dp" />
+
+            <ImageView
+                android:id="@+id/btn_goSelfOtherProduct"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/ed_search"
+                android:layout_alignBottom="@id/ed_search"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/b"
+                android:padding="8dp"
+                app:srcCompat="@drawable/ic_search" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_ctgry"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/category_order_entry" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_forTableHeaderNameSelfOtherProducts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_forTableHeaderName"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/texPrdNameSelfOtherProducts"
+            style="@style/contentTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.92"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/section_2_product_name"
+            app:fontFamily="@font/helvetica_bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/graycolor" />
+
+        <TextView
+            style="@style/contentTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.375"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/Stock"
+            app:fontFamily="@font/helvetica_bold" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/graycolor" />
+
+        <TextView
+            style="@style/contentTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.26"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/Unit"
+            app:fontFamily="@font/helvetica_bold" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/graycolor" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProducts"
+        android:layout_above="@id/ll_mm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_forTableHeaderNameSelfOtherProducts" />
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_mm"
+        android:layout_weight="3"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/lLayout_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relLayout_img"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgView"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/sad1600" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgView"
+                    android:gravity="center"
+                    android:text="Sorry!! \n No Results Found"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:id="@+id/ll_mm"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="vertical"
+       >
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+
+            android:background="@drawable/custom_button"
+            android:text="@string/txtSubmit"
+            android:textColor="#FFFFFF"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:text="Skip"
+            android:textColor="#FFFFFF"
+            android:visibility="visible" />
+
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+       >
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone"
+
+        />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardviewNum"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" />
+
+    <android.inputmethodservice.KeyboardView
+        android:id="@+id/keyboardviewNumDecimal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" />
+    </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

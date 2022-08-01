@@ -1,0 +1,36 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shadow_with_5dp">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_header_part2">
+
+
+        <TextView
+            android:id="@+id/textView_PrdctHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:text="HP 50g"
+            android:textStyle="bold" />
+
+
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/llayout_for_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+
+</TableLayout>

@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.astix.rajtraderssfasales">
+
+    <permission
+        android:name="com.astix.rajtraderssfasales.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" /> <!-- Permission to access data from network provider -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- Permission for receiveing GCM message -->
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- Permission to get the Gmail account(This is required only if you are developing application for lower than android version 4.0) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+
+
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+
+    <application
+        android:name="com.astix.app"
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_app_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/ic_app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/StorelistTheme"
+        android:hardwareAccelerated="false"
+       >
+
+        <activity
+            android:name=".DistributorSocuting.ActivityDistributorAppointment"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".UpdateExisitingDistributor.ActivityDistributorUpdation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DistributorSocuting.ActivityDistributorScouting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActivityDistributorRetailerFeedbackStoreSelectionActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ActualVisitMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpModule.OtpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mTASModule.MTASWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowPathActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUpModule.SignUp"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StoreEditActivityContactLocation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".RouteApprovalOTPScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".merchandizing.PicBeforeMerchandising"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".merchandizing.PicAfterMerchandising"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DayStartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".AllButtonActivity" />
+        <activity android:name=".StoreSelection"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <activity android:name=".DistributorSocuting.SocutingDistributorSelection"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".UpdateExisitingDistributor.ActivityUpdateExisitingDistributorSelectionList"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".StoreSelectionForReOrder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".LastVisitDetails"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".utils.CartonProductEntry"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".LastVisitDetailsSecondPart"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".ProductOrderFilterSearch"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ReturnActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SKUWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity
+            android:name=".SKUWiseSummaryReportMTD"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StoreAndSKUWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity
+            android:name=".StoreAndSKUWiseSummaryReportMTD"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".StoreWiseSummaryReport_ByTab"
+            android:theme="@style/MyThemeTabWithdarktext" />
+        <activity android:name=".CheckDatabaseData" />
+        <activity android:name=".CheckDatabaseDataOrderBooking" />
+        <activity android:name=".MapActivity" />
+        <activity
+            android:name=".TargetVsAchievedActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DistributorCheckInFirstActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".DistributorCheckInSecondActivity"
+          />
+        <activity android:name="com.example.gcm.NotificationActivity" />
+        <activity
+            android:name=".LauncherActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".POSMaterialActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ProductOrderFilterSearch_RecycleView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!--
+        <activity
+            android:name=".ProductOrderSearch"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustNothing" >
+        </activity>
+        -->
+        <activity
+            android:name=".DistributorEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".SyncMaster"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InvoiceSyncMaster"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StoreWiseSummaryReportMTD"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <!--
+        <activity
+            android:name=".My_Summary"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".My_Summary_ByTab"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <activity
+            android:name=".DetailReport_Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_stores_summary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InvoiceStoreSelection"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait" />
+        <!--
+        <activity
+            android:name=".Add_New_Store"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".Add_New_Store_NewFormat"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name=".Stock_Submit"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_add_store"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".New_Stock_Submit"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <activity
+            android:name=".InvoiceProductList"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.example.gcm.HomeActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:noHistory="true" />
+        <!--
+        <activity
+            android:name=".WebPageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_return"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" >
+        </activity>
+        -->
+        <!--
+        <service
+            android:name="com.astix.sfatju.Location_Getting_Service"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.astix.sfatju.GetLock"
+            android:label="@string/title_activity_get_lock" >
+        </activity>
+        <activity
+            android:name="com.astix.sfatju.PicMgr"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_pic_mgr"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        -->
+        <!--
+        <activity
+            android:name="com.astix.sfatju.MapSunilActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.astix.sfatju.JSONParser"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service
+            android:name="com.astix.sfatju.GPSTrackerService"
+            android:enabled="true" />
+        <service
+            android:name="com.astix.sfatju.FusedTrackerService"
+            android:enabled="true" />
+        -->
+        <!-- Goolge API Key -->
+        <!--
+                <meta-data
+               android:name="com.google.android.maps.v2.API_KEY"
+               android:value="AIzaSyAzpyoQozRjzBR39LcKWhCn8M9Qwp-aNac" />
+        -->
+        <!-- android:value="AIzaSyB-0zXRgQOO6UXY7r5oQEuSp8d1YObPlu4" -->
+        <!-- Debugging key -->
+        <!-- android:value="AIzaSyC6q9cMRezVxHVVXODisV8H9hqjEecH5cM" -->
+        <!-- Releasing key -->
+        <activity
+            android:name=".Add_New_Store_DynamicSectionWise"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".ViewAddedStore"
+            android:label="@string/title_activity_view_added_store" /> <!-- Register Broadcast receiver -->
+        <activity
+            android:name=".AddNewStore_DynamicSectionWise"
+            android:label="@string/title_activity_view_added_store"
+            android:screenOrientation="portrait" /> <!-- Register Service -->
+        <activity
+            android:name=".QuotationActivity"
+            android:label="@string/title_activity_quotation"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyThemeTab">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".Delivery_Details_Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/detailActivityTheme" />
+        <activity android:name=".SalesValueTarget" />
+        <activity android:name=".IncentiveActivity" />
+        <activity android:name=".DetailReportSummaryActivity" />
+        <activity
+            android:name=".DistributorMapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SyncMasterDistributor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DSR_Registration"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name=".StoreClosedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddedOutletSummaryReportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DialogDayEndSummaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DayEndDialogTheme" />
+        <activity
+            android:name=".CollectionActivityNew"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ActualVisitStock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProductEntryForm"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+
+        <activity
+            android:name=".PurchaseOrderWebActivity"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".DailyWorkingWebReport"
+            android:screenOrientation="landscape" />
+
+        <activity
+            android:name=".IncentiveStaticPage"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+
+        <activity
+            android:name=".ProductOrderReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".ProductInvoiceReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WarehouseCheckInFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WarehouseCheckInSecondActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".StorelistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".printer.DeviceListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.DeviceDefault.Dialog" />
+        <activity
+            android:name=".StockRequestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DayCollectionReport"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ReportPopUpSalesManTargetVsAchDayWise"
+            android:screenOrientation="portrait"
+
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".DayEndStoreCollectionsChequeReport"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StockUnloadEndClosure"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".collectionReportStoreList"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_collectionreport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CollectionDetailsStoreWise"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".StoreEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".StoreEditActivity1"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SurveyStoreList"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".SurveyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StorelistTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".RemainingStockStatusReport"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Date_Wise_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SpokeVisitDates"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBUuMA_EyjG0VSP-dAyMgGeCG-niwDL8rQ" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="f1190ff0cbdbe64db00b2abc4a814062eb1a7aa0" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.astix.rajtraderssfasales.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".BroadcastReceiverOnBootComplete"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.gcm.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.example.gcm" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".GeocodeAddressIntentService"
+            android:exported="false" />
+        <service
+            android:name=".sync.SyncJobService"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <receiver
+            android:name=".Services.MySMSBroadcastService"
+            android:enabled="true"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="1000">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

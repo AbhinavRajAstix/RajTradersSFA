@@ -1,0 +1,177 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:gravity="top">
+
+        <LinearLayout
+            android:id="@+id/ll_RouteHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_top_rounded_corner_store_selection"
+            android:descendantFocusability="afterDescendants"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvRouteName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="kllkewlekdsfdsfsdfsdfsdfsdfsdfsdfsdfsdfdsfsdfsdfsdfsfsfsd"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/rg1StoreName"
+            style="@style/titleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_RouteHeader"
+            android:gravity="top" />
+
+        <TextView
+            android:id="@+id/OrderValue"
+            style="@style/contentTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_RouteHeader"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:minWidth="45dp"
+            android:text="\u20b9 0"
+            android:textColor="#8496BD" />
+
+        <TextView
+            android:id="@+id/tv_StoreName"
+            style="@style/titleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_RouteHeader"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@id/OrderValue"
+            android:layout_toRightOf="@id/rg1StoreName"
+
+            android:text="abhinav" />
+
+        <TextView
+            android:id="@+id/tvContactDetail"
+            style="@style/contentTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_StoreName"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/OrderValue"
+            android:layout_toRightOf="@id/rg1StoreName"
+            android:text="NA"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_StoreAddress"
+            style="@style/contentTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvContactDetail"
+            android:layout_marginTop="2dp"
+            android:layout_toLeftOf="@id/edit_store"
+            android:layout_toRightOf="@id/rg1StoreName"
+            android:text="NA" />
+
+        <ImageView
+            android:id="@+id/edit_store"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/tv_StoreAddress"
+            android:layout_margin="3dp"
+            android:layout_toLeftOf="@id/show_path"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/edit" />
+
+
+        <TextView
+            android:id="@+id/tv_StoreDistance"
+            style="@style/contentTextStyleDistance"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/OrderValue"
+            android:layout_alignTop="@id/tv_StoreAddress"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/show_path"
+
+            android:gravity="center"
+            android:minWidth="45dp"
+            android:text=""
+            android:textColor="@color/primaryDarkColor" />
+
+        <ImageView
+            android:id="@+id/show_path"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/tv_StoreAddress"
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dp"
+            app:srcCompat="@drawable/bike_icon" />
+
+        <ImageView
+            android:id="@+id/ivTC"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_StoreAddress"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="3dp"
+            app:srcCompat="@drawable/bg_telecalling"
+            app:tint="@color/new_orange" />
+
+        <ImageView
+            android:id="@+id/imgContactVerviedOrNot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_StoreAddress"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/ivTC"
+            android:src="@drawable/notverfiredphone"
+            android:visibility="visible" />
+        <ImageView
+            android:id="@+id/imgStarStore"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_StoreAddress"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/imgContactVerviedOrNot"
+            android:src="@drawable/starstore"
+            android:backgroundTint="@color/new_orange"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/imgUnProductiveStore"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/tv_StoreAddress"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_toRightOf="@id/imgStarStore"
+            android:src="@drawable/storeuunproductive"
+           android:backgroundTint="@color/white"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4">
+
+    <TextView
+        android:id="@+id/tvPrdName"
+        style="@style/contentTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:background="@drawable/table_design_row"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Toilet Soap 250 Gm"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvNoOfCases"
+        style="@style/contentTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="@drawable/table_design_row"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="20"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_FreeQty"
+        style="@style/contentTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="@drawable/table_design_row"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="200"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tv_Line_value"
+        style="@style/contentTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:background="@drawable/table_design_row"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="200"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvNetVal"
+        style="@style/contentTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9"
+        android:background="@drawable/table_design_row"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="200"
+        android:textSize="10sp" />
+
+</LinearLayout>

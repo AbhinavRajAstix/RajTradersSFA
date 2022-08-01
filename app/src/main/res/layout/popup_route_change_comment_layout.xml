@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Please Enter Reason for Route Change"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imgCncl"
+                android:layout_height="30dp"
+                android:visibility="visible"
+                android:layout_width="30dp"
+                android:layout_gravity="right"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/circle_step"
+                android:src="@drawable/close" />
+        </FrameLayout>
+        <RadioGroup
+            android:id="@+id/radiogroupCloseCall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/ll_comment">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comment"
+                android:textStyle="bold"
+                android:textSize="17dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/commenttext"
+                android:background="@drawable/et_boundary_retrun"
+                android:digits="@string/only_alpha_numeric_new"
+                android:inputType="textMultiLine"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:ems="10"
+                android:enabled="true"
+                android:maxLines="10"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/bt_save_and_continue"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:visibility="visible"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_green_button"
+            android:text="Proceed"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</FrameLayout>

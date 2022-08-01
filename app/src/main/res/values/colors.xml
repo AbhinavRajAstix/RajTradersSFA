@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="color1">#FFC9C1</color>
+    <color name="color2">#E7E287</color>
+    <color name="color3">#D7F0F4</color>
+    <color name="color4">#7ABB86</color>
+    <color name="colorAddress">#3f51b5</color>
+
+    <color name="colorTvAPart1">#B1CBE6</color>
+    <color name="colorTvAPart2">#ECECEC</color>
+    <color name="colorPrimary">#01B5F0</color>
+    <color name="colorPrimaryDark">#01a1f0</color>
+    <color name="colorAccent">#76C890</color>
+    <color name="visitmadenewStore">#8B4811</color>
+    <color name="visitmadeOldStore">#7C5838</color>
+    <color name="transparent_black">#0D000000</color>
+    <color name="graycolor">#D7D7D7</color>
+    <color name="graycolorDark">#706969</color>
+    <color name="lighter_gray">#ddd</color>
+    <color name="red">#FF0000</color>
+    <color name="darkgrey">#23282b</color>
+    <color name="my_color">#fff</color>
+    <color name="primaryColorDark">#a6004e</color>
+    <color name="primaryDarkColor">#86023d</color>
+    <color name="storelisttopcolor">#b70152</color>
+    <color name="radiocolor">#e71d35</color>
+    <color name="blue">#0000ff</color>
+    <color name="divider_color">#B1CBE6</color>
+
+    <color name="transparent">#000000</color>
+    <color name="tab_highlight">#e71d35</color>
+
+    <color name="bg_gradient_start">#e71d35</color>
+    <color name="bg_gradient_end">#EB0521</color>
+    <color name="bg_button_login">#1D394C</color>
+
+
+    <color name="primary_text">#212121</color>
+    <color name="primary_color">#166ed2</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="prt_color">#74C543</color>
+
+    <color name="green">#74C543</color>
+
+    <color name="prt_color_border">#68B638</color>
+    <color name="tablecolor">#87ABED</color>
+
+
+    <color name="green_submitted">#2E7D32</color>
+    <color name="sky_color">#72C6F7</color>
+
+    <!--<color name="my_color">#000</color>-->
+
+    <color name="symptom_color_selected">#1554b9</color>
+
+    <color name="reaction_color_selected">#1554b9</color>
+    <color name="static_text_color">#1554b9</color>
+    <color name="journal_entry_listitem_text_color">#1554b9</color>
+    <color name="note_text_disabled">#333333</color>
+
+
+    <color name="col_yellow">#FFFF00</color>
+    <color name="col_tagvsach1">#EDEDED</color>
+    <color name="col_tagvsach2">#FFE699</color>
+    <color name="col_tagvsach3">#305496</color>
+
+
+    <!--    New color by deepak-->
+
+    <color name="new_blue">#446EC0</color>
+    <color name="colorPrimaryBG">#67e7ff</color>
+    <color name="new_green">#49AB62</color>
+    <color name="new_orange">#EFC45B</color>
+</resources>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_RetailerInnerSection"
+    android:background="#F1F5FE"
+
+    android:orientation="vertical">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:outlineAmbientShadowColor="@color/colorPrimary"
+    android:outlineSpotShadowColor="@color/colorPrimary"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:contentPadding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Distributor Name"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text=":" />
+
+            <EditText
+                android:id="@+id/txt_DistributorName"
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:enabled="false"
+                android:text="" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="2"
+                android:orientation="horizontal">
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Retailer Name"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text=":" />
+
+            <EditText
+                android:id="@+id/txt_RetailerName"
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="" />
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="4"
+                android:background="@color/graycolor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Contact Number"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text=":" />
+
+            <EditText
+                android:id="@+id/et_RetailerContactNumber"
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="10"
+                android:padding="2dp"
+                android:text=""  />
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="4"
+            android:background="@color/graycolor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:orientation="vertical">
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp"
+                android:text="Address"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:text=":" />
+
+            <EditText
+                android:id="@+id/txt_RetailerAddress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/et_boundary_retrun"
+                android:digits="@string/only_alpha_numeric_new"
+                android:ems="10"
+                android:enabled="true"
+                android:inputType="textMultiLine"
+                android:maxLines="10"  />
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="4"
+                android:background="@color/graycolor" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:orientation="vertical">
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:padding="2dp"
+                android:text="Comments"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:visibility="gone"
+                android:text=":" />
+
+            <EditText
+                android:id="@+id/txt_RetailerComment"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/et_boundary_retrun"
+                android:digits="@string/only_alpha_numeric_new"
+                android:ems="10"
+                android:enabled="true"
+                android:inputType="textMultiLine"
+                android:maxLines="10" />
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="4"
+                android:background="@color/graycolor" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Feedback"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text=":" />
+
+            <RadioGroup
+                android:id="@+id/rg_RetailerFeedBack"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="2dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/rb_RetailerFeedBackGood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Good" />
+
+            <RadioButton
+                android:id="@+id/rb_RetailerFeedBackBad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bad" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="4"
+                android:background="@color/graycolor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Contact Number"
+                app:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                style="@style/contentTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text=":" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:id="@+id/ll_makeCallsection"
+                android:padding="5dp">
+                <TextView
+                    android:id="@+id/tvStoreContactNumber"
+                    style="@style/contentTextStyle"
+                    android:layout_width="0dp"
+
+                    android:layout_weight="0.7"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content"
+                    android:text="NA" />
+
+                <ImageView
+                    android:id="@+id/tvStoreContactNumberImage"
+                    android:layout_weight="0.3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|center_horizontal"
+
+                    android:src="@drawable/makephonecall" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/bg_test"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:src="@drawable/raj_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="160dp" />
+
+    <EditText
+        android:id="@+id/mobileET"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:hint="Mobile Number"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:maxLength="10"
+        android:inputType="number"
+        android:layout_marginRight="50dp"
+        android:text=""
+        android:textColorHint="#d3d3d3"
+        android:textColor="@color/white"
+        android:background="@drawable/edit_text_diable_bg_transprent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="15dp"
+        android:text="You are not an authenticated user. Please enter your registered mobile number to use this app."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/radioGrp"
+        android:layout_below="@+id/ll_header"
+        android:background="@drawable/btn_background"
+        android:text="Verify Mobile Number"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:visibility="visible"
+        android:id="@+id/btn_verify"
+        android:textSize="12sp"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+</LinearLayout>

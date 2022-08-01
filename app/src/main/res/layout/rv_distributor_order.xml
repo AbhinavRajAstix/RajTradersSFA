@@ -1,0 +1,87 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="2.5dp"
+    android:outlineAmbientShadowColor="@color/colorPrimary"
+    android:outlineSpotShadowColor="@color/colorPrimary"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:contentPadding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="afterDescendants"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_HeaderSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_top_rounded_corner"
+            android:descendantFocusability="afterDescendants"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvSKUType"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/tvLODQty"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/tvPrdName"
+                style="@style/titleTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@id/ll"
+                android:layout_weight="0.6"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="@string/app_name"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_OrderQty"
+                android:layout_width="0dp"
+                android:layout_height="22dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/edit_text_bg_3"
+                android:gravity="center"
+                android:hint="O.Qty"
+                android:inputType="number"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:padding="3dp"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <Spinner
+                android:id="@+id/spinnerUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/spinner_rounded_bg" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

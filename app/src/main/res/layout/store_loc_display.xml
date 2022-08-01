@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_photo"
+    android:layout_width="140dp"
+    android:layout_height="140dp"
+    android:background="@drawable/photo_frame_boundary"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/img_thumbnail"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/imgCncl"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/circle_step"
+        android:src="@drawable/close" />
+
+</RelativeLayout>

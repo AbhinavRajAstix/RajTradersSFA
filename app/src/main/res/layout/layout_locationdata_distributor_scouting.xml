@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/location_layout"
+    android:visibility="visible"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Address*"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvAddress"
+            android:background="@drawable/edittext_with_nocolor_change"
+            android:gravity="center_vertical"
+            android:hint=""
+            android:minHeight="50dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 ,-"
+            android:padding="@dimen/dimen_5dp"
+            android:maxLength="200"
+            android:textColor="#4A4A4A"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_locationFields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_Address"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="City/Village*"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_Village"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCity"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_with_nocolor_change"
+                android:hint=""
+                android:inputType="textNoSuggestions"
+                android:padding="@dimen/dimen_5dp"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvDistrict"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="District*"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_District"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvDistrict"
+
+                android:layout_weight="1"
+                android:background="@drawable/edittext_with_nocolor_change"
+                android:hint=""
+                android:inputType="textNoSuggestions"
+                android:padding="@dimen/dimen_5dp"
+
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_locationFieldsOthers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_locationFields"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:visibility="visible">
+            <TextView
+                android:id="@+id/tvState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="State*"
+                android:textStyle="bold" />
+            <EditText
+                android:id="@+id/et_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_with_nocolor_change"
+                android:hint=""
+                android:inputType="textNoSuggestions"
+                android:layout_below="@+id/tvState"
+                android:layout_weight="1"
+                android:padding="@dimen/dimen_5dp"
+                android:layout_marginRight="10dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                android:textColor="#4A4A4A" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tvPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="Pin Code*"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPinCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPinCode"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_with_nocolor_change"
+                android:hint=""
+                android:inputType="number"
+                android:maxLength="6"
+                android:padding="@dimen/dimen_5dp"
+                android:singleLine="true"
+                android:textColor="#4A4A4A"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:id="@+id/no_internet_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_locationFieldsOthers"
+        android:paddingLeft="@dimen/dimen_5dp"
+        android:text="Location data cannot be populated as internet is not available. Please fill in address, village name and pin code."
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/fl_Map"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/no_internet_msg"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="5dp"
+            map:cameraBearing="112.5"
+            map:cameraTargetLat="22.7253"
+            map:cameraTargetLng="75.8655"
+            map:cameraTilt="30"
+            map:cameraZoom="13"
+
+            />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/fl_Map"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_MapLocationCorrectText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location on map is correct according to you?*"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_yes_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/rb_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/ll_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_rfrshCmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="0.7"
+                android:paddingBottom="10dp"
+                android:text="If you are inside outlet then please go out of the outlet and then click refresh button to update you location"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_refresh"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAllCaps="false"
+                android:layout_weight="0.2"
+
+                android:background="@drawable/logo_background"
+                android:text="Refresh"
+                android:textColor="#FFFF4424"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
