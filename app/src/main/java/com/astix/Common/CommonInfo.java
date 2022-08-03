@@ -11,6 +11,7 @@ public class CommonInfo {
     //firebaseID astix8  pass: astix1234
     public static String APP_TOKEN_PREFS_NAME = "tokenPrefs";
     public static String APP_TOKEN_PREFS_KEY = "token";
+    public static String APP_TOKEN_PREFS_KEYTest = "token";
 
 
 //Contains 0=NoApplicale and 1=Applicable
